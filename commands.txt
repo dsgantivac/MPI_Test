@@ -1,0 +1,6 @@
+mpicc -o mpi_helloworld mpi_helloworld.c
+mpirun -np 1 -mca btl ^openib mpi_helloworld
+
+
+mpirun -np 3 -hostfile ../mpihosts helloworld
+mpirun -np 3 -mca btl ^openib -hostfile ../mpihosts helloworld
